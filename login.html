@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <label for="username">Username</label>
+    <input id="username" type="text">
+
+    <label for="password">Password</label>
+    <input id="password" type="password">
+
+    <button id="login-button">Sign in</button>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("login-button").addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
+
+            if (username === "admin" && password === "12345") {
+                message.textContent = "Login successful";
+            } else {
+                message.textContent = "Invalid credentials";
+            }
+        });
+    </script>
+</body>
+</html>
