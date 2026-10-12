@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
 </head>
-
 <body>
     <h1>Login</h1>
 
@@ -20,20 +18,17 @@
     <p id="message"></p>
 
     <script>
-        document.getElementById("login-button").addEventListener("click", function () {
+        document.getElementById("login-button").addEventListener("click", function() {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
             const message = document.getElementById("message");
 
             if (username === "admin" && password === "12345") {
-                setTimeout(function () {
-                    message.textContent = "Login successful";
-                }, 3000);
+                message.textContent = "Login successful";
             } else {
                 message.textContent = "Invalid credentials";
             }
         });
     </script>
 </body>
-
 </html>
